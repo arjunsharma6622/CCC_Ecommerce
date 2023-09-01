@@ -1,0 +1,51 @@
+.order-history {
+    margin: 2rem 0;
+    padding: 1.6rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+  }
+  
+  .order-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+  }
+  
+  .order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 1rem 0;
+    border-radius: 10px;
+    padding: 2rem;
+    border: 1px solid #ddd;
+  }
+
+  
+  .order-details {
+    flex: 10;
+    font-size: 14px;
+  }
+  
+  .order-status {
+    flex: 1;
+    margin-left: 1rem;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .order-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  

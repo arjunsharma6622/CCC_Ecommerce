@@ -1,0 +1,24 @@
+.dash-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.dash{
+    width: 85%;
+}
+
+.dash-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 20px;
+}
+
+.dash-top :first-child{
+    flex: 3;
+}
+.dash-top :last-child{
+    flex: 5;
+}
