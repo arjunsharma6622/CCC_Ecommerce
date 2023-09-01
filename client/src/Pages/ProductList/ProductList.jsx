@@ -8,7 +8,7 @@ const ProductList = ({ products }) => {
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [cart, setCart] = useState([]); // State for the cart
   const [selectedBrand, setSelectedBrand] = useState('');
-  const [priceRange, setPriceRange] = useState({ min: '500', max: '1500' });
+  const [priceRange, setPriceRange] = useState({ min: '0', max: '10000' });
 
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -93,7 +93,7 @@ const ProductList = ({ products }) => {
               onChange={handleBrandChange}
             >
               <option value="">All Brands</option>
-              {["Nike", "Adidas", "Puma"].map((brand) => (
+              {["Nike", "Adidas", "Puma", "Van Heusen" ,"CK", "LV"].map((brand) => (
                 <option key={brand} value={brand}>
                   {brand}
                 </option>

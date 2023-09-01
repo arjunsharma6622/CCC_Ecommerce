@@ -17,8 +17,6 @@ const ShoppingCart = () => {
   const cart = useSelector((state) => state.cart.items);
   const prevOrders = useSelector((state) => state.orders.prevOrders);
 
-  console.log('prev or', prevOrders)
-  console.log('order d', orderDetails)
 
 
   const handleQuantityChange = (productId, newQuantity) => {
@@ -45,7 +43,7 @@ const ShoppingCart = () => {
       setOrderDetails({
         totalItems : await cart.length,
         totalPrice : calculateTotalPrice(),
-        status : 'Delivered',
+        status : 'Pending',
         date : new Date(),
         id : await prevOrders.length === 0 ? 1 : prevOrders.length + 1
       })
@@ -91,7 +89,7 @@ const ShoppingCart = () => {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                       <p className='product-name'>{name}</p>
                       <p className="product-description">{description}</p>
-                      <p className="product-price">Rs. {price} <span className='product-originalPrice'>Rs. {originalPrice}</span> <span className='product-offer'>({off}% OFF)</span> </p>
+                      <p className="product-price">₹ {price} <span className='product-originalPrice'>₹ {originalPrice}</span> <span className='product-offer'>({off}% OFF)</span> </p>
                       <div className="item-quantity">
                         <label>Quantity</label>
                         <select
@@ -120,8 +118,33 @@ const ShoppingCart = () => {
             })}
           </ul>
           <div className="cart-total">
-            <h3>Price Details</h3>
-            <h3>Total Price: ${calculateTotalPrice()}</h3>
+
+            <p>Order Summary <span>({(cart.length)} Items)</span></p>
+
+            <div className="summary-item">
+            <p>Total MRP </p>
+            <span> ₹ {calculateTotalPrice()}</span>
+            </div>
+            <div className="summary-item">
+            <p>Discount on MRP </p>
+            <span style={{ color: '#4BB59A' }}>-₹ {calculateTotalPrice()}</span>
+            </div>
+            <div className="summary-item">
+            <p>Coupon Discount</p>
+            <span style={{ color: '#FF3F6B', fontSize: '12px' }}>Apply Coupon</span>
+            </div>
+            <div className="summary-item">
+            <p>Convinence Fee</p>
+            <span> ₹ {calculateTotalPrice()}</span>
+            </div>
+
+            <hr width="100%" />
+
+            <div className="summary-item final-price">
+            <p>Total Amount</p>
+            <span> ₹ {calculateTotalPrice()}</span>
+            </div>
+
             <button className="checkout-button" onClick={handleCheckout}>Checkout</button>
           </div>
         </div>

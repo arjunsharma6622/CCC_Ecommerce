@@ -65,169 +65,20 @@ import ProductList from './Pages/ProductList/ProductList';
 import ShoppingCart from './Components/Cart/ShoppingCart';
 import { UserDashboard } from './Pages/UserDashboard/UserDashboard';
 import "./App.css"
+import { products } from './Products';
 
 const App = () => {
-  // Sample data for demonstration purposes
-  const featuredProducts = [
-    { id: 1, 
-      name: "Nike Revolution 3", 
-      price: 5899, 
-      originalPrice : 8999,
-      image: "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?w=480&dpr=2.0", 
-      description: "This is a Nike shoe, with very soft and good sole",
-      offer : 23 
-    },
-    { id: 2, 
-      name: "Nike Revolution 3", 
-      price: 5899, 
-      originalPrice : 8999,
-      image: "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?w=480&dpr=2.0", 
-      description: "This is a Nike shoe, with very soft and good sole",
-      offer : 23 
-    },
-    { id: 3, 
-      name: "Nike Revolution 3", 
-      price: 5899, 
-      originalPrice : 8999,
-      image: "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?w=480&dpr=2.0", 
-      description: "This is a Nike shoe, with very soft and good sole",
-      offer : 23 
-    },
-    { id: 4, 
-      name: "Nike Revolution 3", 
-      price: 5899, 
-      originalPrice : 8999,
-      image: "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?w=480&dpr=2.0", 
-      description: "This is a Nike shoe, with very soft and good sole",
-      offer : 23 
-    },
-    { id: 5, 
-      name: "Nike Revolution 3", 
-      price: 5899, 
-      originalPrice : 8999,
-      image: "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?w=480&dpr=2.0", 
-      description: "This is a Nike shoe, with very soft and good sole",
-      offer : 23 
-    },
-    { id: 6, 
-      name: "Nike Revolution 3", 
-      price: 5899, 
-      originalPrice : 8999,
-      image: "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?w=480&dpr=2.0", 
-      description: "This is a Nike shoe, with very soft and good sole",
-      offer : 23 
-    },
-    { id: 7, 
-      name: "Nike Revolution 3", 
-      price: 5899, 
-      originalPrice : 8999,
-      image: "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?w=480&dpr=2.0", 
-      description: "This is a Nike shoe, with very soft and good sole",
-      offer : 23 
-    },
-    { id: 8, 
-      name: "Nike Revolution 3", 
-      price: 5899, 
-      originalPrice : 8999,
-      image: "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?w=480&dpr=2.0", 
-      description: "This is a Nike shoe, with very soft and good sole",
-      offer : 23 
-    },
-
-  ]
-
-  const products = [
-    { id: 1, 
-      name: "Nike Revolution 3", 
-      price: 1000, 
-      image: "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?w=480&dpr=2.0", 
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in velit vulputate, sollicitudin.",
-      originalPrice : 5499,
-      offer : 37,
-      brand : 'Nike',
-      quantity : 1
-    }, 
-    { id: 2, 
-      name: "Nike Revolution 3", 
-      price: 1000, 
-      image: "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?w=480&dpr=2.0", 
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in velit vulputate, sollicitudin.",
-      originalPrice : 5499,
-      offer : 37 ,
-      brand : 'Nike',
-      quantity : 1
-    }, 
-    { id: 3, 
-      name: "Nike Revolution 3", 
-      price: 1000, 
-      image: "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?w=480&dpr=2.0", 
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in velit vulputate, sollicitudin.",
-      originalPrice : 5499,
-      offer : 37 ,
-      quantity : 1
-    }, 
-    { id: 4, 
-      name: "Nike Revolution 3", 
-      price: 1000, 
-      image: "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?w=480&dpr=2.0", 
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in velit vulputate, sollicitudin.",
-      originalPrice : 5499,
-      offer : 37 ,
-      quantity : 1
-    }, 
-    { id: 4, 
-      name: "Nike Revolution 3", 
-      price: 1000, 
-      image: "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?w=480&dpr=2.0", 
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in velit vulputate, sollicitudin.",
-      originalPrice : 5499,
-      offer : 37 ,
-      quantity : 1
-    }, 
 
 
-
-  ];
-
-  const cartItems = [
-    { id: 1, 
-      name: "Computer", 
-      price: 1000, 
-      image: "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?w=480&dpr=2.0", 
-      description: "This is a computer", 
-      quantity: 1,
-      originalPrice: 8999,
-      offer: 49
-    },
-    { id: 2, 
-      name: "Computer", 
-      price: 1000, 
-      image: "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?w=480&dpr=2.0", 
-      description: "This is a computer", 
-      quantity: 1,
-      originalPrice: 8999,
-      offer: 49
-    },
-    { id: 3, 
-      name: "Computer", 
-      price: 1000, 
-      image: "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?w=480&dpr=2.0", 
-      description: "This is a computer", 
-      quantity: 1,
-      originalPrice: 8999,
-      offer: 49
-    },
-
-  ]
 
   return (
     <BrowserRouter>
       <div className="app">
         <Header />
         <Routes>
-          <Route path="/" exact element={<Home featuredProducts={featuredProducts} />} />
+          <Route path="/" exact element={<Home featuredProducts={products} />} />
           <Route path="/products" element={<ProductList products={products} />} />
-          <Route path="/cart" element={<ShoppingCart cartItems={cartItems} />} />
+          <Route path="/cart" element={<ShoppingCart/>} />
           <Route path='/dashboard' element={<UserDashboard />} />
         </Routes>
         <Footer />
