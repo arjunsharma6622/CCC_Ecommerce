@@ -1,0 +1,43 @@
+/* OrderSuccess.css */
+
+.order-success {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .order-success h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+  }
+  
+  .order-success p {
+    font-size: 18px;
+    margin-bottom: 2rem;
+  }
+  
+  .order-success .home-button {
+    background-color: #FF3F6B;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none; /* Remove underline from the Link */
+  }
+  
+  .order-success .home-button:hover {
+    background-color: #ff2351; /* Slightly darker shade when hovered */
+  }
+
+  @media (max-width : 470px){
+    .order-success p{
+      font-size: 13px;
+    }
+    .order-success{
+      padding: 0.4rem;
+    }
+  }
+  

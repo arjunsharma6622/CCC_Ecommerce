@@ -11,13 +11,10 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: center;
-    }
+
   }
   
-  .logo {
+  .logo { 
     font-size: 1.5rem;
     font-weight: 500;
     color: #FF3F6B;
@@ -102,4 +99,25 @@
 
   .pink-text{
     color: #FF3F6B;
+  }
+
+
+  @media screen and (max-width: 1000px) {
+    .user-actions-left{
+      display: none;
+    }
+    
+  }
+
+  @media (max-width: 768px) {
+    .header{
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+  @media (max-width: 390px) {
+    .header{
+      padding: 0.6rem 2rem;
+    }
   }

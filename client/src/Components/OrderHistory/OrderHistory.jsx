@@ -44,7 +44,7 @@ return (
 
               <ProgressBar completed={statusObj[order.status]} height='6px' isLabelVisible={false} bgColor={'green'}/>
 
-              <p>Deliver by {formatDateToDDMMM(order.date + 7)}</p>
+              <p>Deliver by in 7 days</p>
             </div>
           </li>
         ))}

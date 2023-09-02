@@ -29,12 +29,12 @@ const Footer = () => {
         </div>
         <div className="footer-section">
           <h3>Contact Us</h3>
-          <p>Email: contact@yourbrand.com</p>
+          <p>Email: arjunsharma6622@gmail.com</p>
           <p>Phone: +1234567890</p>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2023 Your Brand. All rights reserved.</p>
+        <p>&copy; 2023 ECOMMERCE. All rights reserved.</p>
       </div>
     </footer>
   );

@@ -75,7 +75,7 @@ const ProductList = ({ products }) => {
 
             <div className="search-bar">
               {/* <button className="search-button"> */}
-                <i className="fas fa-search" style={{ color: 'gray' }}></i>
+              <i className="fas fa-search" style={{ color: 'gray' ,marginLeft:'10px' }}></i>
               {/* </button> */}
               <input type="text"
                 id="search"
@@ -93,7 +93,7 @@ const ProductList = ({ products }) => {
               onChange={handleBrandChange}
             >
               <option value="">All Brands</option>
-              {["Nike", "Adidas", "Puma", "Van Heusen" ,"CK", "LV"].map((brand) => (
+              {["Nike", "Adidas", "Puma", "Van Heusen", "CK", "LV"].map((brand) => (
                 <option key={brand} value={brand}>
                   {brand}
                 </option>
@@ -103,6 +103,13 @@ const ProductList = ({ products }) => {
           <div className="filter-section">
             <label htmlFor="minPrice">Min Price:</label>
             <Slider
+              trackStyle={{ backgroundColor: '#FF3F6B' }}
+              handleStyle={{
+                borderColor: "#FF3F6B",
+                backgroundColor: "#FF3F6B",
+                boxShadow: "0 0 6px rgba(255, 63, 107, 0.6)"
+              }}
+
               min={0}
               max={10000} // Set your desired max price here
               value={parseInt(priceRange.min)}
@@ -113,6 +120,12 @@ const ProductList = ({ products }) => {
           <div className="filter-section">
             <label htmlFor="maxPrice">Max Price:</label>
             <Slider
+              trackStyle={{ backgroundColor: '#FF3F6B' }}
+              handleStyle={{
+                borderColor: "#FF3F6B",
+                backgroundColor: "#FF3F6B",
+                boxShadow: "0 0 6px rgba(255, 63, 107, 0.6)"
+              }}
               min={0}
               max={10000} // Set your desired max price here
               value={parseInt(priceRange.max)}
