@@ -1,0 +1,120 @@
+.product-card {
+    padding-top: 0;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: start;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+
+    /* border: 1px solid #ddd; */
+  }
+  
+  .product-image{
+    width: 100%;
+    /* background-color: #FE935C; */
+    position: relative;
+  }
+
+  .product-image img {
+    width: 100%;
+    
+    height: 320px;
+    object-fit: cover;
+  }
+
+  .rating{
+    position: absolute;
+    bottom: 14px;
+    left : 10px;
+    background-color: rgba(255, 255, 255, 0.718);
+    padding: 0.4rem 0.7rem;
+    border-radius: 5px;
+    font-size: 12px;
+    /* margin-bottom: 20px; */
+  }
+  
+  .product-details {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .product-name{
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .product-description {
+    color: #777;
+    font-weight: 300;
+    font-size: 13px;
+  }
+  
+  .product-price {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .product-originalPrice{
+    font-size: 12px;
+    color: #777;
+    font-weight: 400;
+    text-decoration: line-through;
+  }
+
+  .product-offer{
+    font-size: 12px;
+    font-weight: 400;
+    color: #FE935C;
+  }
+  
+  .add-to-cart-button {
+    /* background-color: #FF3F6B; */
+    
+    color: #FF3F6B;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid #FF3F6B;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    /* transition: background-color 0.3s; */
+    width: 100%;
+    font-size: 16px;
+    background-color: transparent;
+  }
+
+  .brand-tag{
+    font-size: 11px;
+    margin-left: 12px;
+    background-color: #e5e5e5;
+    padding: 0.2rem 0.6rem;
+    border-radius: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  
+  @media (max-width: 768px){
+    .product-image img {
+      width: 100%;
+      
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+
+  @media (max-width: 400px){
+    .product-image img {
+      width: 100%;
+      
+      height: 320px;
+      object-fit: cover;
+    }
+  }
